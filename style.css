@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin:0;/*the solution to a consistent problem*/
+    font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+
+header{
+    background:#66ff66;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+}
+
+h2{
+    margin-top: 0;
+}
+
+.name{
+    font-size:1.5em;
+}
+
+a{
+    color: #66ff66;
+}
+
+a:hover{
+    color:#ffff66;
+}
+
+/* a:visited{
+    color:#ffb366;
+} */
+
+.name,
+.main-nav li{
+    background: #fff;
+    margin-top:20px;
+	margin-bottom: 6px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.main-nav li{
+    list-style: none;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-nav,
+.main-nav ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.name a,
+.main-nav a{
+  padding:10px 15px;
+  display:block;/* ----Enlarges the clickacble areas ---- */
+}
+
+footer{
+    background: #d9e4ea;
+    text-align: center;
+}
+
+
+.container{
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+
+img{
+    width: 100%;
+}
+
+
+@media(min-width:769px){
+
+    .main-header{
+        position:fixed;
+        background:#fff;
+        box-shadow:0 1px 4px rgba(0,0,0,.4);
+        width:100%;
+        top: 0;   /* put it at the top */
+        z-index:1000;
+      }
+
+      .columns{
+        padding: 120px 0;
+    }
+
+    .container{
+        margin:0 auto;
+        width:70%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .primary,
+    .secondary{
+        margin-right: 50px;
+    }
+
+    .col{
+        flex: 1 200px;
+    }
+
+    .main-nav,
+    .main-nav ul{
+        flex-direction: row;
+    }
+
+    .main-nav{
+        justify-content: center;
+    }
+    .name{
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container{
+        width: 80%;
+        max-width: 1050px;
+    }
+
+    .secondary{
+        flex: 1.5 250px;
+    }
+}
